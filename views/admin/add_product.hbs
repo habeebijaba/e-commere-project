@@ -1,0 +1,61 @@
+<div id="layoutSidenav_content">
+                <main>
+                    <div class="">
+<div class="container">
+    <div class="row pt-5">
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-6">
+            <form action="/admin/add-products" method="post" enctype="multipart/form-data">
+            
+                <h1 class="text-center">Add Product</h1>
+                {{#if adduserError}}
+                <p class="error text-danger">User alread Exists With Entered Mail Id</p>
+                {{/if}}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Product Name</label>
+                    <input type="text" name="name" class="form-control " required="true" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter Name">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Select Category</label>
+
+                        <select class="w-100" name="category" id="cars" >
+
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="exampleInputEmail1">Price</label>
+                    <input type="text" name="price" class="form-control " required="true" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter Price">
+
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <div>
+                    <textarea class="w-100" id="description" name="description" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                <input type="file" name="image">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+                    </div>
+                </main></div>
