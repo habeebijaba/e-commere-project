@@ -9,6 +9,8 @@ var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
 var hbs = require('express-handlebars')
 var db = require('./configurations/connection')
+var fileupload=require('express-fileupload')
+
 
 
 var app = express();
@@ -35,6 +37,7 @@ db.connect((error) => {
     console.log('connection successfull');
 })
 
+app.use(fileupload())
 app.use('/', userRouter);
 app.use('/admin', adminRouter);
 

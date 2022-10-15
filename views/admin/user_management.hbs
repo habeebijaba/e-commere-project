@@ -1,7 +1,7 @@
 <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-<div class="container">
+<div class="container ">
     <div class="row d-block ">
        
         
@@ -30,7 +30,7 @@
 
                     {{!-- <td><a href="/admin/edit-user/{{this.email}}" onclick="" class="btn btn-primary">Edit User</a></td> --}}
                     {{#if this.isBlocked}}
-                    <td><a href="/admin/unblock-user/{{_id}}" onclick="return confirm('block user {{this.name}}')" class="btn btn-danger" style="width:8rem ;">unblock User</a></td>
+                    <td><a href="/admin/unblock-user/{{_id}}" onclick="return confirm('block user {{this.name}}')" class="btn btn-warning" style="width:8rem ;">unblock User</a></td>
                     {{else}}
                     <td><a href="/admin/block-user/{{_id}}" onclick="return confirm('block user {{this.name}}')" class="btn btn-danger" style="width:8rem ;" >block User</a></td>
                     {{/if}}

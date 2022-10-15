@@ -12,6 +12,8 @@
         <table class="table mt-5 " id="viewusers">
             <thead>
                 <tr>
+
+                    <th scope="col"></th>
                     
                     <th scope="col">Category Id</th>
                     <th scope="col">Category Name</th>
@@ -20,15 +22,15 @@
                 </tr>
             </thead>
             <tbody>
-                {{#each allUsers}}
+                {{#each allCategories}}
                 <tr>
+                    <td>*</td>
                     
                     <th scope="row">{{_id}}</th>
-                    <td>{{this.name}}</td>
-                    <td>{{this.email}}</td>
-                    <td><a href="/admin/edit-user/{{this.email}}" onclick="" class="btn btn-primary">Edit User</a></td>
-                    <td><a href="/admin/delete-user/{{this.email}}" onclick="return confirm('delete user {{this.name}}')" class="btn btn-danger">Delete User</a></td>
-                    <td><img style=" height:50px"  id="z" src="/product-images/{{this._id}}.jpg" alt="" ></td>
+                    <td>{{this.category}}</td>
+                    {{!-- <td><a href="/admin/edit-user/{{this.email}}" onclick="" class="btn btn-primary">Edit User</a></td> --}}
+                    <td><a href="/admin/delete-category/{{this._id}}" onclick="return confirm('delete category {{this.category}}')" class="btn btn-danger">Delete Category</a></td>
+                    {{!-- <td><img style=" height:50px"  id="z" src="/product-images/{{this._id}}.jpg" alt="" ></td> --}}
                 </tr>
                 {{/each}}
             </tbody>
