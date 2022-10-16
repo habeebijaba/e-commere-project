@@ -125,7 +125,7 @@
                 <p class="error text-danger pl-5 ">Invalid Username Or Password</p>
                 {{/if}}
                 {{#if blockError}}
-                <p class="error text-danger pl-5 ">temporar blocked admin</p>
+                <p class="error text-danger pl-5 ">you are blocked by admin</p>
 {{/if}}
 
                   {{!-- <div class="d-flex flex-row align-items-center mb-4">
@@ -155,11 +155,14 @@
 
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 pt-2">
-                    <button type="submit" class=" btn btn-primary btn-lg">Login</button>
+                    <button type="submit" class=" btn btn-primary btn-lg w-50" style="">Login</button>
                   </div>
 
                 </form>
-
+                
+<a href="/otp-login" style="text-decoration: none;" ><div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 pt-2">
+                    <button type="submit" class=" btn btn-danger btn-lg w-75" style="">OTP Login</button>
+                  </div></a>
 
 
               </div>

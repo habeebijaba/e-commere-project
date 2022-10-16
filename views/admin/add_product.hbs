@@ -70,8 +70,8 @@
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Add Product</p>
 
                 <form action="/admin/add-product" method="post" enctype="multipart/form-data" class="mx-1 mx-md-4">
-                {{#if mailRedundancyError}}
-                <p class="error text-danger pl-5 ">Entered Email Already Exists</p>
+                {{#if productRedundancyError}}
+                <p class="error text-danger pl-5 ">Entered Product Already Exists</p>
                 {{/if}}
 
                   <div class="d-flex flex-row align-items-center mb-4">
@@ -89,7 +89,7 @@
                         <select class="w-100" name="category" id="" >
                           {{#each allCategories}}
 
-                        <option value="volvo">{{this.category}}</option>
+                        <option>{{this.category}}</option>
                         {{/each}}
                     </select>
                    <div><label for="exampleInputEmail1">Select Category</label></div> 

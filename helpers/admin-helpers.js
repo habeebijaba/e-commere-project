@@ -45,8 +45,6 @@ module.exports = {
                 console.log(response);
                 resolve(response)
             })
-
-
         })
 
     },
@@ -67,7 +65,6 @@ module.exports = {
             console.log(category);
             if (category) {
                 resolve({ status: false })
-
             } else {
                 db.get().collection(collection.CATEGORY_COLLECTION).insertOne(data).then((response) => {
                     resolve({ status: true })

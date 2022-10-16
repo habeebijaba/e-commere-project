@@ -58,9 +58,11 @@
     {{/if}}
 
     {{{body}}}
-
-  
-
+    {{#if admin}}
+    {{>admin_footer}}
+    {{else}}
+   {{>user_footer}}
+    {{/if}}
 
    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -118,6 +120,9 @@
   {{!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script> --}}
   <!-- End Google Map -->
+
+
+
 
 
 
